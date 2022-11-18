@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketballLeague.WEB", "BasketballLeague.WEB\BasketballLeague.WEB.csproj", "{F4022D22-24AB-4688-9DEB-CA0466BF02B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "DataAccess\Data.csproj", "{31635859-F7EB-4D38-B65F-74993ADC03F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{31635859-F7EB-4D38-B65F-74993ADC03F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{5EF8F7C9-49AA-412A-A820-2CFB36004602}"
 EndProject
