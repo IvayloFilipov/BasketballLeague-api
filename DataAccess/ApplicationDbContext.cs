@@ -26,15 +26,15 @@ namespace DataAccess
         {
             base.OnModelCreating(builder);
 
-            //builder.Entity<Team>()
-            //    .HasMany(mr => mr.MatchResults)
-            //    .WithOne(t => t.HomeTeam)
-            //    .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<MatchResult>()
+                .HasOne(mr => mr.HomeTeam)
+                .WithMany()
+                .OnDelete(DeleteBehavior.Restrict);
 
-            //builder.Entity<Team>()
-            //    .HasMany(tr => tr.MatchResults)
-            //    .WithOne(t => t.AwayTeam)
-            //    .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<MatchResult>()
+                .HasOne(mr => mr.AwayTeam)
+                .WithMany()
+                .OnDelete(DeleteBehavior.Restrict);
 
         }
     }

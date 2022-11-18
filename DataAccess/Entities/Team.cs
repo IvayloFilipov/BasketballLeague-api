@@ -12,5 +12,5 @@ public class Team : BaseModel<int>
     public string Name { get; set; } = string.Empty;
 
     // many-to-one - one team has many match results
-    public ICollection<MatchResult> MatchResults { get; set; } = new HashSet<MatchResult>();
+    // public ICollection<MatchResult> MatchResults { get; set; } = new HashSet<MatchResult>();
 }
