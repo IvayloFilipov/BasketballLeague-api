@@ -1,4 +1,4 @@
-﻿namespace Repositories.DTOs
+﻿namespace DataAccess.DTOs
 {
     public class BestDefensiveTeams
     {

@@ -1,12 +1,13 @@
 ﻿using DataAccess.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Interfaces;
-using Repositories.DTOs;
+using DataAccess.DTOs;
+using Microsoft.AspNetCore.Cors;
 
 namespace BasketballLeague.WEB.Controllers
 {
     [ApiController]
-    [Route("teams/[[controller]]")]
+    [Route("api/[controller]")]
     public class TeamsController : ControllerBase
     {
         private readonly ITeamRepository teamRepository;

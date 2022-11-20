@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Repositories.Interfaces;
-using Repositories.DTOs;
+using DataAccess.DTOs;
+using Microsoft.AspNetCore.Cors;
 
 namespace BasketballLeague.WEB.Controllers
 {
     [ApiController]
-    [Route("matches/[[conroler]]")]
+    [Route("api/[controller]")]
     public class MatchesController : ControllerBase
     {
         private readonly IResultRepositiry resultRepositiry;

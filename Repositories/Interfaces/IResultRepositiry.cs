@@ -1,4 +1,4 @@
-﻿using Repositories.DTOs;
+﻿using DataAccess.DTOs;
 
 namespace Repositories.Interfaces
 {

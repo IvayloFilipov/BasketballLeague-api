@@ -1,6 +1,6 @@
-﻿namespace Repositories.DTOs
+﻿namespace DataAccess.DTOs
 {
-    public class MatchResults
+    public class HighlightMatch
     {
         public string HomeTeam { get; set; } = string.Empty;
 
@@ -10,5 +10,6 @@
 
         public int AwayScore { get; set; }
 
+        public int TotalPoints { get; set; }
     }
 }

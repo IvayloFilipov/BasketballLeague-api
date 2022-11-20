@@ -1,10 +1,17 @@
 using DataAccess;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Repositories.Interfaces;
 using Repositories.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    });
+});
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
@@ -34,6 +41,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
+app.UseCors();
 
 app.MapControllers();
 

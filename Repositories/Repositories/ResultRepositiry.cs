@@ -1,6 +1,6 @@
 ﻿using DataAccess;
 using Repositories.Interfaces;
-using Repositories.DTOs;
+using DataAccess.DTOs;
 
 namespace Repositories.Repositories
 {

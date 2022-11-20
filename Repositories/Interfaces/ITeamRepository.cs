@@ -1,5 +1,5 @@
 ﻿using DataAccess.Entities;
-using Repositories.DTOs;
+using DataAccess.DTOs;
 
 namespace Repositories.Interfaces
 {

@@ -51,7 +51,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("HomeTeamId");
 
-                    b.ToTable("MatchResults");
+                    b.ToTable("MatchResults", (string)null);
                 });
 
             modelBuilder.Entity("DataAccess.Entities.Team", b =>
@@ -69,7 +69,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Teams");
+                    b.ToTable("Teams", (string)null);
                 });
 
             modelBuilder.Entity("DataAccess.Entities.MatchResult", b =>

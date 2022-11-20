@@ -1,8 +1,8 @@
 ﻿using DataAccess;
+using DataAccess.DTOs;
 using DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Interfaces;
-using Repositories.DTOs;
 
 namespace Repositories.Repositories
 {
@@ -20,25 +20,18 @@ namespace Repositories.Repositories
                 .Teams
                 .FromSqlInterpolated($"exec GetAllTeams")
                 .ToListAsync();
-            // or
-            //var allTeams = await dbContext.Teams.FromSqlRaw($"exec GetAllTeams").ToListAsync();
 
             return allTeams;
         }
 
         public async Task<List<BestDefensiveTeams>> GetBestDefensiveTeamsAsync()
         {
-            //var defensiveTeams = await dbContext
-            //    .Teams
-            //    .FromSqlInterpolated($"exec GetTopFiveDefensiveTeams")
-            //    .ToListAsync();
+            var defensiveTeams = await dbContext
+                .BestDefensiveTeams
+                .FromSqlInterpolated($"exec GetTopFiveDefensiveTeams")
+                .ToListAsync();
 
-            //return defensiveTeams;
-
-            //var defensiveTeams = Helper.RawSqlQuery("exec GetAllTeams", x => new BestDefensiveTeams { Name = (string)x[0], DefensivePoints = (int)x[1] }); 
-
-            //return defensiveTeams;
-            throw new NotImplementedException();
+            return defensiveTeams;
         }
 
         public async Task<List<BestOffensiveTeams>> GetBestOffensiveTeamsAsync()
