@@ -1,6 +1,8 @@
-﻿namespace DataAccess.DTOs
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace DataAccess.DTOs
 {
-    //[Keyless]
+    [Keyless]
     public class BestOffensiveTeams
     {
         public string Name { get; set; } = string.Empty;

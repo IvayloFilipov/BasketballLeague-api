@@ -20,6 +20,4 @@ public class MatchResult : BaseModel<int>
     public int HomeScore { get; set; }
 
     public int AwayScore { get; set; }
-
-    public int MatchTotalScore => this.HomeScore + this.AwayScore;
 }

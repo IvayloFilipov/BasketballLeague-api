@@ -12,14 +12,14 @@ namespace DataAccess.Migrations
 CREATE PROC GetHighlightMatch
 AS
 SELECT TOP(1) 
-	tt.[Name] AS 'Home team', 
-	t.[Name] AS 'Away team',  
+	tt.[Name] AS 'HomeTeam', 
+	t.[Name] AS 'AwayTeam',  
 	mr.HomeScore, mr.AwayScore, 
-	(mr.HomeScore + mr.AwayScore) AS 'Total points'
+	(mr.HomeScore + mr.AwayScore) AS 'TotalPoints'
 FROM MatchResults AS mr
 JOIN Teams AS t ON mr.AwayTeamId = t.Id
 JOIN Teams AS tt ON mr.HomeTeamId = tt.Id
-ORDER BY 'Total points' DESC
+ORDER BY 'TotalPoints' DESC
 ";
 
             migrationBuilder.Sql(sp);

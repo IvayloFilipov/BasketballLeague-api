@@ -11,11 +11,11 @@ namespace DataAccess.Migrations
             var sp = @"
 CREATE PROC GetTopFiveDefensiveTeams
 AS
-SELECT TOP(5) t.[Name], Result.[Defensive points] 
+SELECT TOP(5) t.[Name], Result.[DefensivePoints] 
 FROM 
   (SELECT 
       DefensivePoints.HomeTeamId AS TeamId, 
-      SUM(DefensivePoints.[Defence points]) AS 'Defensive points' 
+      SUM(DefensivePoints.[Defence points]) AS 'DefensivePoints' 
     FROM 
       (
         SELECT 
@@ -34,7 +34,7 @@ FROM
       ) AS DefensivePoints 
 GROUP BY DefensivePoints.HomeTeamId) AS Result 
 JOIN Teams AS t ON t.Id = Result.TeamId 
-ORDER BY Result.[Defensive points] ASC
+ORDER BY Result.[DefensivePoints] ASC
 ";
 
             migrationBuilder.Sql(sp);

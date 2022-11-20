@@ -11,10 +11,10 @@ namespace DataAccess.Migrations
             var sp = @"
 CREATE PROC GetTopFiveOffensiveTeams
 AS
-SELECT TOP(5) t.[Name], TotalScore.[Total point] FROM
+SELECT TOP(5) t.[Name], TotalScore.[TotalPoints] FROM
 (SELECT 
   Result.[TeamId] AS TeamId, 
-  SUM(Result.[Total points]) AS 'Total point' 
+  SUM(Result.[Total points]) AS 'TotalPoints' 
 FROM 
   (
     SELECT 
@@ -33,7 +33,7 @@ FROM
   ) AS Result 
 GROUP BY Result.[TeamId]) AS TotalScore
 JOIN Teams AS t ON t.Id = TotalScore.TeamId
-ORDER BY TotalScore.[Total point] DESC
+ORDER BY TotalScore.[TotalPoints] DESC
 ";
 
             migrationBuilder.Sql(sp);

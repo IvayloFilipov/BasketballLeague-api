@@ -12,8 +12,8 @@ namespace DataAccess.Migrations
 CREATE PROC GetLastTenMatches
 AS
 SELECT TOP(10) 
-	tt.[Name] AS 'Home team', 
-	t.[Name] AS 'Away team',  
+	tt.[Name] AS 'HomeTeam', 
+	t.[Name] AS 'AwayTeam',  
 	mr.HomeScore, mr.AwayScore
 FROM MatchResults AS mr
 JOIN Teams AS t ON mr.AwayTeamId = t.Id

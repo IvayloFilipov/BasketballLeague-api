@@ -1,5 +1,5 @@
-﻿using DataAccess.BaseModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using DataAccess.BaseModel;
 
 using static Common.GlobalConstants;
 

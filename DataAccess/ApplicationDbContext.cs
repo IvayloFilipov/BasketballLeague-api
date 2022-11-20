@@ -23,6 +23,9 @@ namespace DataAccess
 
         // Keyless entity types
         public DbSet<BestDefensiveTeams> BestDefensiveTeams { get; set; } = null!;
+        public DbSet<BestOffensiveTeams> BestOffensiveTeams { get; set; } = null!;
+        public DbSet<HighlightMatch> HighlightMatch { get; set; } = null!;
+        public DbSet<MatchResults> MatchesResults { get; set; } = null!;
 
 
         // One-to-many, Many-to-many relations, Composite key - with fluent API
@@ -42,6 +45,12 @@ namespace DataAccess
 
             // Keyless entiti types
             builder.Entity<BestDefensiveTeams>().HasNoKey();
+
+            builder.Entity<BestOffensiveTeams>().HasNoKey();
+
+            builder.Entity<HighlightMatch>().HasNoKey();
+
+            builder.Entity<MatchResults>().HasNoKey();
         }
     }
 }

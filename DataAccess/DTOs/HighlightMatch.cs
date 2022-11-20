@@ -1,5 +1,8 @@
-﻿namespace DataAccess.DTOs
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace DataAccess.DTOs
 {
+    [Keyless]
     public class HighlightMatch
     {
         public string HomeTeam { get; set; } = string.Empty;

@@ -1,7 +1,7 @@
-﻿using DataAccess;
+﻿using Microsoft.EntityFrameworkCore;
+using DataAccess;
 using DataAccess.DTOs;
 using DataAccess.Entities;
-using Microsoft.EntityFrameworkCore;
 using Repositories.Interfaces;
 
 namespace Repositories.Repositories
@@ -36,7 +36,12 @@ namespace Repositories.Repositories
 
         public async Task<List<BestOffensiveTeams>> GetBestOffensiveTeamsAsync()
         {
-            throw new NotImplementedException();
+            var offensiveTeams = await dbContext
+                .BestOffensiveTeams
+                .FromSqlInterpolated($"exec GetTopFiveOffensiveTeams")
+                .ToListAsync();
+
+            return offensiveTeams;
         }
     }
 }

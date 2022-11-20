@@ -1,6 +1,7 @@
-﻿using DataAccess;
+﻿using Microsoft.EntityFrameworkCore;
 using Repositories.Interfaces;
 using DataAccess.DTOs;
+using DataAccess;
 
 namespace Repositories.Repositories
 {
@@ -15,12 +16,22 @@ namespace Repositories.Repositories
 
         public async Task<HighlightMatch> GetHighlightMatchAsync()
         {
-            throw new NotImplementedException();
+            var highlightMatch = await dbContext
+                .HighlightMatch
+                .FromSqlInterpolated($"exec GetHighlightMatch")
+                .FirstAsync();
+
+            return highlightMatch;
         }
 
         public async Task<List<MatchResults>> GetMatchResultsAsync()
         {
-            throw new NotImplementedException();
+            var matchResults = await dbContext
+                .MatchesResults
+                .FromSqlInterpolated($"exec GetLastTenMatches")
+                .ToListAsync();
+
+            return matchResults;
         }
     }
 }

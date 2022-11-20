@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Repositories.Interfaces;
 using DataAccess.DTOs;
-using Microsoft.AspNetCore.Cors;
 
 namespace BasketballLeague.WEB.Controllers
 {
