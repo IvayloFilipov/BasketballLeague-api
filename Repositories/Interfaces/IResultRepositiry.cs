@@ -6,6 +6,6 @@ namespace Repositories.Interfaces
     {
         Task<List<MatchResults>> GetMatchResultsAsync();
 
-        Task<HighlightMatch> GetHighlightMatchAsync();
+        Task<List<HighlightMatch>> GetHighlightMatchAsync();
     }
 }

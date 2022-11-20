@@ -14,12 +14,12 @@ namespace Repositories.Repositories
             this.dbContext = dbContext;
         }
 
-        public async Task<HighlightMatch> GetHighlightMatchAsync()
+        public async Task<List<HighlightMatch>> GetHighlightMatchAsync()
         {
             var highlightMatch = await dbContext
                 .HighlightMatch
                 .FromSqlInterpolated($"exec GetHighlightMatch")
-                .FirstAsync();
+                .ToListAsync();
 
             return highlightMatch;
         }
