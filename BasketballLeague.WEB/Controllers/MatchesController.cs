@@ -1,16 +1,34 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Text.RegularExpressions;
+﻿using Microsoft.AspNetCore.Mvc;
+using Repositories.Interfaces;
+using Repositories.DTOs;
 
 namespace BasketballLeague.WEB.Controllers
 {
     [ApiController]
-    [Route("match-results/[conroller]")]
+    [Route("matches/[[conroler]]")]
     public class MatchesController : ControllerBase
     {
-        public MatchesController()
-        {
+        private readonly IResultRepositiry resultRepositiry;
 
+        public MatchesController(IResultRepositiry resultRepositiry)
+        {
+            this.resultRepositiry = resultRepositiry;
+        }
+
+        [HttpGet("get-results")]
+        public async Task<IActionResult> GetMachResults()
+        {
+            List<MatchResults> matchResults = await this.resultRepositiry.GetMatchResultsAsync();
+
+            return Ok(matchResults);
+        }
+
+        [HttpGet("get-highlight-match")]
+        public async Task<IActionResult> GetHighlightMatch()
+        {
+            var highlightMatch = await this.resultRepositiry.GetHighlightMatchAsync();
+
+            return Ok(highlightMatch);
         }
     }
 }

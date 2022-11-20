@@ -1,6 +1,7 @@
 ﻿using DataAccess.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace DataAccess
 {
@@ -36,6 +37,13 @@ namespace DataAccess
                 .WithMany()
                 .OnDelete(DeleteBehavior.Restrict);
 
+            //builder.Entity<BestDefensiveTeams>(entity =>
+            //{
+            //    entity.HasNoKey();
+
+            //    entity.Property(e => e.Name);
+            //    entity.Property(e => e.DefensivePoints);
+            //});
         }
     }
 }
