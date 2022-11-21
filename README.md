@@ -16,14 +16,12 @@ The database schema consists of the following main entities:
 
 * Teams
 * MatchResults
-* 
-### **See the Database schema below:**
 
+### **See the Database schema below:**
 
 <p align="center">
   <img width="1000" src="https://github.com/IvayloFilipov/BasketballLeague-api/blob/master/db_BasketballLeague.png" alt="Diagram"> 
 </p>
-
 
 ## **Backend**
 The web project contains:
@@ -39,7 +37,7 @@ This application is designed by using the **main** technologies below:
    2) **[ASP.NET Core 6 Web API](https://en.wikipedia.org/wiki/ASP.NET_Core)**
    3) **[Entity Framework Core](https://en.wikipedia.org/wiki/Entity_Framework?wprov=srpw1_0)**
    4) **[MS SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server)**
-   5) **[Keyless entiti Types]([https://nunit.org/](https://learn.microsoft.com/en-us/ef/core/modeling/keyless-entity-types?tabs=data-annotations))**
+   5) **[Keyless Entity Types](https://learn.microsoft.com/en-us/ef/core/modeling/keyless-entity-types?tabs=data-annotations)**
    
 ## **Tools Used**
    1) **[MS Visual Studio 2022](https://code.visualstudio.com/)**
@@ -52,7 +50,6 @@ This application is designed by using the **main** technologies below:
 [IvayloFilipov](https://github.com/IvayloFilipov/MyLibrary-api)
 
 - LinkedIn: [Ivaylo Filipov](https://www.linkedin.com/in/ivaylo-filipov-44149420b/)
-
 
 ------------
 
