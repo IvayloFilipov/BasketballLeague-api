@@ -24,6 +24,26 @@ namespace Repositories.Repositories
             return allTeams;
         }
 
+        public async Task<List<Team>> GetAllTeamsAscAsync()
+        {
+            var allTeamsASC = await dbContext
+                .Teams
+                .FromSqlInterpolated($"exec GetAllTeamsASC")
+                .ToListAsync();
+
+            return allTeamsASC;
+        }
+
+        public async Task<List<Team>> GetAllTeamsDescAsync()
+        {
+            var allTeamsDESC = await dbContext
+                .Teams
+                .FromSqlInterpolated($"exec GetAllTeamsDESC")
+                .ToListAsync();
+
+            return allTeamsDESC;
+        }
+
         public async Task<List<BestDefensiveTeams>> GetBestDefensiveTeamsAsync()
         {
             var defensiveTeams = await dbContext

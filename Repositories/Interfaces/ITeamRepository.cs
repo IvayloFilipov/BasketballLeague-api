@@ -7,6 +7,10 @@ namespace Repositories.Interfaces
     {
         Task<List<Team>> GetAllTeamsAsync();
 
+        Task<List<Team>> GetAllTeamsAscAsync();
+
+        Task<List<Team>> GetAllTeamsDescAsync();
+
         Task<List<BestOffensiveTeams>> GetBestOffensiveTeamsAsync();
 
         Task<List<BestDefensiveTeams>> GetBestDefensiveTeamsAsync();

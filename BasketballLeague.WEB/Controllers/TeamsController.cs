@@ -23,6 +23,22 @@ namespace BasketballLeague.WEB.Controllers
             return Ok(teams);
         }
 
+        [HttpGet("get-teams-asc")]
+        public async Task<IActionResult> GetAllTeamsASC()
+        {
+            List<Team> teamsAsc = await this.teamRepository.GetAllTeamsAscAsync();
+
+            return Ok(teamsAsc);
+        }
+
+        [HttpGet("get-teams-desc")]
+        public async Task<IActionResult> GetAllTeamsDESC()
+        {
+            List<Team> teamsDesc = await this.teamRepository.GetAllTeamsDescAsync();
+
+            return Ok(teamsDesc);
+        }
+
         [HttpGet("get-top-offensive")]
         public async Task<IActionResult> GetBestOffensiveTeams()
         {
