@@ -21,7 +21,7 @@ The database schema consists of the following main entities:
 
 
 <p align="center">
-  <img width="1000" src="[https://github.com/IvayloFilipov/MyLibrary-api/blob/main/RilaLibrary/db-MyLibrary.png](https://github.com/IvayloFilipov/BasketballLeague-api/blob/master/db_BasketballLeague.png)" alt="Diagram"> 
+  <img width="1000" src="https://github.com/IvayloFilipov/BasketballLeague-api/blob/master/db_BasketballLeague.png" alt="Diagram"> 
 </p>
 
 
