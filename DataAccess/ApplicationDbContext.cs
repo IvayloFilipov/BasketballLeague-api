@@ -23,8 +23,11 @@ namespace DataAccess
 
         // Keyless entity types
         public DbSet<BestDefensiveTeams> BestDefensiveTeams { get; set; } = null!;
+
         public DbSet<BestOffensiveTeams> BestOffensiveTeams { get; set; } = null!;
+
         public DbSet<HighlightMatch> HighlightMatch { get; set; } = null!;
+
         public DbSet<MatchResults> MatchesResults { get; set; } = null!;
 
 
@@ -43,14 +46,16 @@ namespace DataAccess
                 .WithMany()
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Keyless entiti types
-            builder.Entity<BestDefensiveTeams>().HasNoKey();
+            // Keyless entity types with fluent API.
+            // If [Keyless] atribute is used it is not necessary to describe them with fluent API.
 
-            builder.Entity<BestOffensiveTeams>().HasNoKey();
+            //builder.Entity<BestDefensiveTeams>().HasNoKey();
 
-            builder.Entity<HighlightMatch>().HasNoKey();
+            //builder.Entity<BestOffensiveTeams>().HasNoKey();
 
-            builder.Entity<MatchResults>().HasNoKey();
+            //builder.Entity<HighlightMatch>().HasNoKey();
+
+            //builder.Entity<MatchResults>().HasNoKey();
         }
     }
 }
