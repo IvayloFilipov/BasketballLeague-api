@@ -5,7 +5,7 @@ ASP .Net Core 6.0 Web API
  
  ------------
  
- - *"BasketballLeague-api" is an online application to store the results of a basketball league.*
+ - *"BasketballLeague-api" is an online application to store the results of a basketball league. There is a home teams, and away teams that are playing. All the database queries are in a form of SQL Server stored procedures returning the result. Stored procedures themselves were triggered via Entity Framework.*
 
 
  ------------
@@ -59,4 +59,3 @@ This application is designed by using the **main** technologies below:
 #### The application has been created solely for educational purpose.
 
 ------------
-
