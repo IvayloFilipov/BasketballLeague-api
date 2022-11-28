@@ -42,7 +42,9 @@ ORDER BY Result.[DefensivePoints] ASC
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            var sp = @"DROP PROC GetTopFiveDefensiveTeams";
 
+            migrationBuilder.Sql(sp);
         }
     }
 }

@@ -20,7 +20,9 @@ ORDER BY t.[Name] ASC
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            var sp = @"DROP PROC GetAllTeamsASC";
 
+            migrationBuilder.Sql(sp);
         }
     }
 }

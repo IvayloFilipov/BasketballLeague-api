@@ -27,7 +27,9 @@ ORDER BY 'TotalPoints' DESC
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            var sp = @"DROP PROC GetHighlightMatch";
 
+            migrationBuilder.Sql(sp);
         }
     }
 }

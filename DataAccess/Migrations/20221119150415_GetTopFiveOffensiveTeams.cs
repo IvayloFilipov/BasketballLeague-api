@@ -41,7 +41,9 @@ ORDER BY TotalScore.[TotalPoints] DESC
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            var sp = @"DROP PROC GetTopFiveOffensiveTeams";
 
+            migrationBuilder.Sql(sp);
         }
     }
 }

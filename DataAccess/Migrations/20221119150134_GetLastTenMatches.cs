@@ -26,7 +26,9 @@ ORDER BY mr.MatchDate DESC
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            var sp = @"DROP PROC GetLastTenMatches";
 
+            migrationBuilder.Sql(sp);
         }
     }
 }

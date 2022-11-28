@@ -20,7 +20,9 @@ ORDER BY t.[Name] DESC
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            var sp = @"DROP PROC GetAllTeamsDESC";
 
+            migrationBuilder.Sql(sp);
         }
     }
 }

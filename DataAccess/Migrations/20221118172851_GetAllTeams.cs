@@ -18,7 +18,9 @@ SELECT * FROM Teams";
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            var sp = @"DROP PROC [dbo].[GetAllTeams]";
 
+            migrationBuilder.Sql(sp);
         }
     }
 }
